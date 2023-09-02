@@ -6,6 +6,15 @@ import { InstructorFormComponent } from './instructor-form/instructor-form.compo
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseFormComponent } from './course-form/course-form.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
+import { StudentListComponent } from './student-list/student-list.component';
+import { StudentFormComponent } from './student-form/student-form.component';
+import { StudentDetailComponent } from './student-detail/student-detail.component';
+import { EnrollmentListComponent } from './enrollment-list/enrollment-list.component';
+import { EnrollmentComponent } from './enrollment/enrollment.component';
+import { AssignmentComponent } from './assignment/assignment.component';
+import { SubmissionComponent } from './submission/submission.component';
+import { AnnouncementComponent } from './announcement/announcement.component';
+import { DepartmentComponent } from './department/department.component';
 
 const routes: Routes = [
   { path: 'instructors', component: InstructorListComponent },
@@ -16,7 +25,18 @@ const routes: Routes = [
   { path: 'courses/new', component: CourseFormComponent },
   { path: 'courses/:id', component: CourseDetailComponent },
   { path: 'courses/:id/edit', component: CourseFormComponent },
-  { path: '', redirectTo: '/courses', pathMatch: 'full' }
+  { path: 'students', component: StudentListComponent },
+  { path: 'students/new', component: StudentFormComponent },
+  { path: 'students/:id', component: StudentDetailComponent },
+  { path: 'students/:id/edit', component: StudentFormComponent },
+  { path: 'enroll', component: EnrollmentComponent },
+  { path: 'enrollment-list', component: EnrollmentListComponent },
+  { path: 'assignments', component: AssignmentComponent },
+  { path: 'assignments/:id', component: AssignmentComponent },
+  { path: 'submissions', component: SubmissionComponent },
+  { path: 'announcements', component: AnnouncementComponent },
+  { path: 'departments', component: DepartmentComponent },
+  { path: '', redirectTo: '/students', pathMatch: 'full' }
 ];
 
 @NgModule({
