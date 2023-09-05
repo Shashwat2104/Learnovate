@@ -63,38 +63,47 @@ body {
   transform: scale(1.05); /* Slight zoom effect */
 }
 
-/* Button Styles */
+/* Updated Button Styles */
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px; /* Slightly larger buttons */
+  padding: 15px 30px; /* Slightly larger buttons for better impact */
   gap: 10px;
-  height: 60px; /* Taller buttons */
-  width: 220px; /* Wider buttons */
+  height: 70px; /* Taller buttons for a grand appearance */
+  width: 240px; /* Wider buttons for a bold statement */
   border: none;
-  background: #FFA726; /* Orange background */
-  border-radius: 30px; /* Rounder corners */
+  background: #ff4f81; /* Glamorous pink background */
+  border-radius: 20px; /* Perfectly round corners for elegance */
   cursor: pointer;
-  font-weight: 700;
-  transition: background-color 0.3s, transform 0.2s; /* Smooth color and scale transitions */
+  font-weight: 600; /* Slightly bolder text */
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Smooth color, scale, and shadow transitions */
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
-.button .lable {
-  line-height: 28px; /* Taller text */
-  font-size: 24px; /* Larger font size */
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 2px; /* Increased letter spacing */
+.button .label {
+  line-height: 36px; /* Taller text for readability */
+  font-size: 28px; /* Larger font size for impact */
+  color: #ffffff; /* White text for contrast */
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  letter-spacing: 3px; /* Increased letter spacing for style */
 }
 
 .button:hover {
-  background: #edaa46; /* Darker orange on hover */
-  transform: scale(1.05); /* Slight zoom effect */
+  background: #ff3366; /* Darker pink on hover for an exciting effect */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 .button:hover .svg-icon {
-  animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite; /* Continuous spin animation on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .button {
+    width: 100%; /* Full width buttons on smaller screens */
+  }
 }
 
 .svg-icon {
