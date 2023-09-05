@@ -1,114 +1,124 @@
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif; /* Glamorous font */
+  background-color: #0a0a0a; /* Dark background */
+  margin: 0;
+  padding: 0;
+  color: #fff; /* White text */
+}
+
+/* Navbar Styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #6558d3;
-    color: #fff;
-  }
-  
-  .brand {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .nav-options {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-options a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .auth-buttons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .signup,
-  .signin {
-    padding: 6px 12px;
-    border: none;
-    background-color: #ff9800;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .signup:hover,
-  .signin:hover {
-    background-color: #e57373;
-  }
-  
-  
+  display: flex;
+   /* border: 3px solid black; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #6558d3; /* Deep purple */
+  color: #ff9800; /* Bright orange text */
+}
 
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    gap: 8px;
-    height: 40px;
-    width: 151px;
-    border: none;
-    background: #FFA726;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-  
-  .lable {
-    line-height: 22px;
-    font-size: 17px;
-    color: #fff;
-    font-family: sans-serif;
-    letter-spacing: 1px;
-  }
-  
-  .button:hover {
-    background: #edaa46;
-  }
-  .svg-icon{
-    color: white;
-  }
-  .button:hover .svg-icon {
-    animation: slope 1s linear infinite;
-  }
-  
-  @keyframes slope {
-    0% {
-    }
-  
-    50% {
-      transform: rotate(10deg);
-    }
-  
-    100% {
-    }
-  }
-  
-  
-  .profile{
-    display: flex;
-   align-items: center;
-  }
+.brand {
+  /* border: 3px solid black; */
+  font-size: 36px; /* Larger font size */
+  font-weight: 800; /* Bold */
+  text-shadow: 2px 2px 4px rgba(255, 152, 0, 0.2); /* Glamorous text shadow */
+}
 
-  ::ng-deep .custom-menubar {
-    background-color: rgb(246, 241, 241);
-    border: none;
-   color: white;
-   margin-right: 20px;
-    font-weight: 400;
-    
-  }
+.nav-options a {
+   /* border: 3px solid black; */
+   /* display: flex; */
+   margin-left: 12px;
+   justify-content: space-between;
+   font-size: x-large;
+  color: #ff9800; /* Bright orange text */
+  font-weight: 700; /* Slightly bolder */
+  transition: color 0.3s, transform 0.2s; /* Smooth color and scale transitions */
+}
 
-  ::ng-deep .custom-menubar>span {
-    color: #fff; /* Change to the desired text color */
-   } 
+.nav-options a:hover {
+  color: #ff5722; /* Darker orange on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
 
-  
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
 
-/* styles.css (or your component-specific CSS file) */
+.signup,
+.signin {
+  padding: 10px 20px; /* Slightly larger buttons */
+  border: none;
+  background-color: #ff9800; /* Bright orange background */
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth color and scale transitions */
+}
 
+.signup:hover,
+.signin:hover {
+  background-color: #e57373; /* Darker orange on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Button Styles */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px; /* Slightly larger buttons */
+  gap: 10px;
+  height: 60px; /* Taller buttons */
+  width: 220px; /* Wider buttons */
+  border: none;
+  background: #FFA726; /* Orange background */
+  border-radius: 30px; /* Rounder corners */
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth color and scale transitions */
+}
+
+.button .lable {
+  line-height: 28px; /* Taller text */
+  font-size: 24px; /* Larger font size */
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px; /* Increased letter spacing */
+}
+
+.button:hover {
+  background: #edaa46; /* Darker orange on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.button:hover .svg-icon {
+  animation: spin 1s linear infinite;
+}
+
+.svg-icon {
+  color: #fff;
+}
+
+/* Profile Styles */
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+/* Custom Menubar Styles */
+::ng-deep .custom-menubar {
+  background-color: #f6f1f1;
+  border: none;
+  color: #6558d3; /* Deep purple text */
+  margin-right: 20px;
+  font-weight: 600; /* Slightly bolder */
+}
+
+::ng-deep .custom-menubar>span {
+  color: #ff9800; /* Bright orange text */
+}
+
+/* Additional Styles */
+/* Add your additional styles and animations for specific elements here */

@@ -1,3 +1,4 @@
+/* Footer Styles */
 .footer {
   background-color: #6558d3;
   color: #fff;
@@ -6,7 +7,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  margin: 200px auto;
+  margin: 0; /* Adjust margin to control spacing */
 }
 
 .container {
@@ -37,8 +38,14 @@ a {
   display: block;
   margin-top: 10px;
   font-weight: bold;
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
+a:hover {
+  color: #ffcc00; /* Change link color on hover */
+}
+
+/* Contact Form Styles */
 .contact-form {
   margin-top: 20px;
 }
@@ -62,6 +69,12 @@ textarea {
   border-radius: 5px;
   background-color: transparent;
   color: #fff;
+  transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #ffcc00; /* Change border color on focus */
 }
 
 textarea {
@@ -75,7 +88,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth button transition */
 }
 
 button:hover {

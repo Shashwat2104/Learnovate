@@ -11,7 +11,7 @@
   flex-direction: column;
   gap: 10px;
   max-width: 100%;
-  background-color: #fff;
+  background-color: #f2c11e; 
   padding: 20px;
   border-radius: 20px;
   position: relative;
@@ -113,7 +113,7 @@
 .submit {
   border: none;
   outline: none;
-  background-color: royalblue;
+  background-color: #ff5722;
   padding: 10px;
   border-radius: 10px;
   color: #fff;
@@ -122,7 +122,12 @@
 }
 
 .submit:hover {
-  background-color: rgb(56, 90, 194);
+   background-color: #ff4500;
+}
+
+.submit {
+  /* ... other styles ... */
+  transition: background-color 0.3s ease-in-out; /* Smoother transition */
 }
 
 @keyframes pulse {
@@ -132,7 +137,7 @@
   }
 
   to {
-    transform: scale(1.8);
+    transform: scale(1.2); /* Increased scale for glamour */
     opacity: 0;
   }
 }
