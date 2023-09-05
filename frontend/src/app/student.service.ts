@@ -1,33 +1,32 @@
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Student } from './student.model';
+import { GlobalService } from './global.service';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentService {
-  private baseUrl = 'http://127.0.0.1:8000/api/students/';
 
-  constructor(private http: HttpClient) { }
+ private EnrolledCourses = []
 
-  getStudents(): Observable<Student[]>{
-    return this.http.get<Student[]>(this.baseUrl)
-  }
-  getStudent(id:number): Observable<Student>{
-    const url=`${this.baseUrl}${id}/`
-    return this.http.get<Student>(url)
+  constructor(private http : HttpClient,private globalServices : GlobalService) { }
+
+  getEnrolledCourses(){
+
+    const token = this.globalServices.getStudentLoginDetails()?.token ?? '';
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': token
+    });
+
+    return this.http.get(`${environment.API_URL}/api/course/enrolled/${this.globalServices.getStudentLoginDetails()?.id}`,{headers})
+
 
   }
-  createStudent(studentData:Student): Observable<Student>{
-    return this.http.post<Student>(this.baseUrl, studentData)
-  }
-  updateStudent(id:number, studentData:Student): Observable<Student>{
-    const url=`${this.baseUrl}${id}/`
-    return this.http.put<Student>(url, studentData)
-  }
-  deleteStudent(id:number): Observable<void>{
-    const url = `${this.baseUrl}${id}/`;
-    return this.http.delete<void>(url)
-  }
+
+  
+
+
 }
