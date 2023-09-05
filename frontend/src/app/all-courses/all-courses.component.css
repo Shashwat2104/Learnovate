@@ -1,68 +1,59 @@
-/* Global Styles */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
-}
-
-/* Header Styles */
-.header {
-  background-color: #4a90e2;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-/* Department Cards */
+/* Updated Colors and Fonts */
 .departmentscard {
   width: 90%;
   margin: auto;
   border-radius: 0.5rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   margin-top: 20px;
   padding: 20px;
-  background-color: #fff;
+  background-color: #fff; /* White background */
+  font-family: 'Montserrat', sans-serif; /* Elegant font */
 }
 
-.flex {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.login {
+  width: 100%;
+  font-family: 'Playfair Display', serif; /* Classy font */
+  font-weight: 700;
+  font-size: 30px; /* Larger font size */
+  color: #6558d3; /* Glamorous purple */
+}
+
+.card {
+  margin-top: 20px;
 }
 
 .depttitle {
   margin-top: 10px;
-  font-size: 1.5rem;
 }
 
-/* Educational Plans */
+/* Stylish Plan Cards */
 .plan {
   border-radius: 16px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  background-color: #fff;
-  color: #697e91;
+  box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
+  padding: 10px;
+  background-color: #f6f1f1; /* Light gray background */
+  color: #2b2b2b; /* Dark text color */
   max-width: 300px;
-  margin: 20px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .plan:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px); /* Hover effect */
+  box-shadow: 0 40px 40px -30px rgba(0, 38, 255, 0.3); /* Elevated shadow */
+  background-color: #6558d3; /* Glamorous purple on hover */
+  color: #fff; /* White text color on hover */
 }
 
 .plan strong {
   font-weight: 600;
-  color: #425275;
+  color: #4133B7; /* Darker purple */
 }
 
 .plan .inner {
+  align-items: center;
   padding: 20px;
   padding-top: 40px;
-  background-color: #ecf0ff;
+  background-color: #fff; /* White inner background */
   border-radius: 12px;
   position: relative;
 }
@@ -78,7 +69,7 @@ body {
   padding: 0.625em 0.75em;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #425475;
+  color: #4133B7; /* Darker purple */
 }
 
 .plan .pricing small {
@@ -90,11 +81,20 @@ body {
 .plan .title {
   font-weight: 600;
   font-size: 1.25rem;
-  color: #425675;
+  color: #4133B7; /* Darker purple */
+  text-transform: uppercase; /* Uppercase titles */
+}
+
+.title {
+  height: 30px;
 }
 
 .plan .title + * {
   margin-top: 0.75rem;
+}
+
+.plan .info + * {
+  margin-top: 1rem;
 }
 
 .plan .features {
@@ -114,11 +114,11 @@ body {
 }
 
 .plan .features .icon {
-  background-color: #1FCAC5;
+  background-color: #6558d3; /* Glamorous purple for icons */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #fff; /* White icon color */
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -137,11 +137,11 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end; /* Align button to the right */
 }
 
 .plan .button {
-  background-color: #6558d3;
+  background-color: #6558d3; /* Glamorous purple button */
   border-radius: 6px;
   color: #fff;
   font-weight: 500;
@@ -153,21 +153,21 @@ body {
   padding: 0.625em 0.75em;
   text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .plan .button:hover,
 .plan .button:focus {
-  background-color: #4133B7;
+  background-color: #4133B7; /* Darker purple on hover */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .flex {
-    flex-direction: column;
-    align-items: flex-start;
+  .departmentscard {
+    width: 100%;
   }
 
-  .plan {
-    max-width: 100%;
+  .flex {
+    flex-direction: column;
   }
 }
